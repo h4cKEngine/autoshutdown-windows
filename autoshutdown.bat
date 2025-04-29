@@ -27,9 +27,9 @@ title Autoshutdown
     if %HOURS% EQU -1 (
         shutdown /a
         if %errorlevel% NEQ 0 (
-            echo "No previous shutdown scheduled."
+            echo No previous shutdown scheduled.
         ) else (
-            echo "Previous scheduling canceled."
+            echo Previous scheduling canceled.
         )
         goto endlabel
     )
@@ -62,7 +62,7 @@ title Autoshutdown
     shutdown /s /f /t %SECONDS%
 
     :: Display a message indicating the automatic shutdown time
-    echo "Automatic shutdown after %HOURS% hours and %MINUTES% minutes"
+    echo Automatic shutdown after %HOURS% hours and %MINUTES% minutes
 
 :endlabel
     :: Pause the script to keep the command prompt window open
